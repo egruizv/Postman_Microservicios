@@ -1,0 +1,1346 @@
+{
+	"info": {
+		"_postman_id": "71d70e4f-42ac-48b8-8b63-bdf073a8b44f",
+		"name": "Microservicios con Spring Boot, Cloud y Docker",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2746857",
+		"_collection_link": "https://mosqueteros-8020.postman.co/workspace/Mosqueteros-Workspace~4ac6d32d-f4a1-49e9-ab66-ae6bb6132a33/collection/2746857-71d70e4f-42ac-48b8-8b63-bdf073a8b44f?action=share&source=collection_link&creator=2746857"
+	},
+	"item": [
+		{
+			"name": "03_microservicio_cursos_crud",
+			"item": [
+				{
+					"name": "Cursos_Todos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/cursos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cursos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SoloUnCursoMateado",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/curso",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"curso"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Curso_envioName",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/cursos/Java",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cursos",
+								"Java"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Elimina_Curso",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/curso/Java EE",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"curso",
+								"Java EE"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insertarCurso",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Spring Boot Base\",\r\n\t\"duracion\" : 40,\r\n\t\"horario\": \"todo el dia\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/curso",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"curso"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modificacion_Curso",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Spring Boot Base\",\r\n\t\"duracion\" : 80,\r\n\t\"horario\": \"mañana\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/curso",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"curso"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "04_microservicio_contactos",
+			"item": [
+				{
+					"name": "contactos_All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/contactos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"contactos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "contacros_id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/contactos/476",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"contactos",
+								"476"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insertar_contacto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"edad\": 99,\r\n        \"email\": \"666@gmail.com\",\r\n        \"nombre\": \"Señor muy mayor\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/contactos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"contactos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminar_contacto",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"edad\": 99,\r\n        \"email\": \"666@gmail.com\",\r\n        \"nombre\": \"Señor muy mayor\"\r\n    }"
+						},
+						"url": {
+							"raw": "http://localhost:8080/contactos/519",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"contactos",
+								"519"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizar_contacto",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"edad\": 100,\r\n        \"email\": \"100@gmail.com\",\r\n        \"idContacto\": 520,\r\n        \"nombre\": \"Señor muy mayor\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/contactos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"contactos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "05a_microservicio_cliente",
+			"item": [
+				{
+					"name": "buscarPorEdades",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9001/personas/10/300",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"personas",
+								"10",
+								"300"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "altaNueva",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9001/personas/Juan/juan@gmail.com/1000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"personas",
+								"Juan",
+								"juan@gmail.com",
+								"1000"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "05b_microservicio_cliente",
+			"item": [
+				{
+					"name": "altaPersonaCliente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9001/personas/Tirso/tiros@gmail.com/50",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"personas",
+								"Tirso",
+								"tiros@gmail.com",
+								"50"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "05c_microservicio_cliente_contactos",
+			"item": [
+				{
+					"name": "altaPersonaCliente",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"edad\": 100,\r\n        \"email\": \"100@gmail.com\",\r\n        \"idContacto\": 520,\r\n        \"nombre\": \"Señor muy mayor\"\r\n    }"
+						},
+						"url": {
+							"raw": "http://localhost:9001/personas/Macarena3/ma@gmail.com/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"personas",
+								"Macarena3",
+								"ma@gmail.com",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "05d_microservicio_cliente_paises",
+			"item": [
+				{
+					"name": "PaisesAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"edad\": 100,\r\n        \"email\": \"100@gmail.com\",\r\n        \"idContacto\": 520,\r\n        \"nombre\": \"Señor muy mayor\"\r\n    }"
+						},
+						"url": {
+							"raw": "http://localhost:8080/paises",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"paises"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "06_microservicio_contactos_control_errores",
+			"item": [
+				{
+					"name": "contactos_All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/contactos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"contactos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Contacto_Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/contactos/476",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"contactos",
+								"476"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Agregar_contacto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"edad\": 111,\r\n    \"email\": \"aaaaaab\",\r\n    \"nombre\": \"NuevoContacto\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/contactos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"contactos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "07_microservicio_cliente_contactos_control_errores",
+			"item": [
+				{
+					"name": "AltaPersona",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9001/personas/PrimeraPersona/primera@gmail.com/12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"personas",
+								"PrimeraPersona",
+								"primera@gmail.com",
+								"12"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "08_microservicio_contactos_respuesta_completa",
+			"item": [
+				{
+					"name": "ObtenerContactosConTotal",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"edad\": 111,\r\n    \"email\": \"aaaaaab\",\r\n    \"nombre\": \"NuevoContacto\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/contactos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"contactos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AñadirContacto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"edad\": 22,\r\n        \"email\": \"prueba3\",\r\n        \"nombre\": \"prueba2\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/contactos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"contactos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "09_microservicio_cliente_contactos_respuesta_completa",
+			"item": [
+				{
+					"name": "BuscarPersonaEdades",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"edad\": 22,\r\n        \"email\": \"prueba2\",\r\n        \"nombre\": \"prueba2\"\r\n    }"
+						},
+						"url": {
+							"raw": "http://localhost:9001/personas/50/300",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"personas",
+								"50",
+								"300"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AltaPersona",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9001/personas/Juanito/juanito557@gmail.com/77",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"personas",
+								"Juanito",
+								"juanito557@gmail.com",
+								"77"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "10_microservicio_contactos_securizado",
+			"item": [
+				{
+					"name": "ObtenerTodosContactos_Seguridad",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "user1",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "user1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"edad\": 22,\r\n        \"email\": \"prueba2\",\r\n        \"nombre\": \"prueba2\"\r\n    }"
+						},
+						"url": {
+							"raw": "http://localhost:8080/contactos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"contactos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ObtenerUnContacto_SinSeguridad",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"edad\": 22,\r\n        \"email\": \"prueba2\",\r\n        \"nombre\": \"prueba2\"\r\n    }"
+						},
+						"url": {
+							"raw": "http://localhost:8080/contactos/476",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"contactos",
+								"476"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DarAltaContactoConSeguridad",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"edad\": 11,\r\n        \"email\": \"alta@gmail.com\",        \r\n        \"nombre\": \"Solo Admin\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/contactos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"contactos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "11_microservicio_contactos_securizado bd",
+			"item": [
+				{
+					"name": "ObtenerTodosContactos_Seguridad",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "user1",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "user1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"edad\": 22,\r\n        \"email\": \"prueba2\",\r\n        \"nombre\": \"prueba2\"\r\n    }"
+						},
+						"url": {
+							"raw": "http://localhost:8080/contactos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"contactos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ObtenerUnContacto_SinSeguridad",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"edad\": 22,\r\n        \"email\": \"prueba2\",\r\n        \"nombre\": \"prueba2\"\r\n    }"
+						},
+						"url": {
+							"raw": "http://localhost:8080/contactos/476",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"contactos",
+								"476"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DarAltaContactoConSeguridad",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"edad\": 11,\r\n        \"email\": \"alta2@gmail.com\",        \r\n        \"nombre\": \"Solo Admin2\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/contactos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"contactos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "12_microservicio_cliente_contactos_seguro",
+			"item": [
+				{
+					"name": "AltaPersonaSeguridad",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9001/personas/Juanito/juanito557@gmail.com/77",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"personas",
+								"Juanito",
+								"juanito557@gmail.com",
+								"77"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "12b_microservicio_cliente_contactos_seguro_webclient",
+			"item": [
+				{
+					"name": "AltaPersonaSeguridad",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9001/personas/Juanito4/juanito111@gmail.com/66",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"personas",
+								"Juanito4",
+								"juanito111@gmail.com",
+								"66"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "13_microservicio_contactos_securizado_token_jwt",
+			"item": [
+				{
+					"name": "Login_JWT",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/login?user=admin&pwd=admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"login"
+							],
+							"query": [
+								{
+									"key": "user",
+									"value": "admin"
+								},
+								{
+									"key": "pwd",
+									"value": "admin"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "14_microservicio_cliente_contactos_seguro_jwt",
+			"item": [
+				{
+					"name": "Alta_JWT",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9001/personas/JWT2/jwt2@gmail.com/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"personas",
+								"JWT2",
+								"jwt2@gmail.com",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "keycloak-26.4.7",
+			"item": [
+				{
+					"name": "ContactosRealm_Obtener_Token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "client_id",
+									"value": "login",
+									"description": "ID_Cliente en Keycloak",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"description": "Usuario , tenemos tres admin, user1 , user2 ",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "text"
+								},
+								{
+									"key": "grant_type",
+									"value": "password",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/realms/ContactosRealm/protocol/openid-connect/token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"realms",
+								"ContactosRealm",
+								"protocol",
+								"openid-connect",
+								"token"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "15_microservicio_contactos_securizado_oauth2_keycloak",
+			"item": [
+				{
+					"name": "ObtenerTodosContactos_Oauth2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8500/contactos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"contactos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "16_microservicio_cliente_contactos_seguro_jwt_oauth2_keycloak",
+			"item": [
+				{
+					"name": "Datos_Por_Edades",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9001/personas/10/100",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"personas",
+								"10",
+								"100"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AltaPersonaKeyclok",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9001/personas/Dos/dos@gmail.com/15",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"personas",
+								"Dos",
+								"dos@gmail.com",
+								"15"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "17_18_19_microservicio_cliente_contactos_en_eureka",
+			"item": [
+				{
+					"name": "Alta_Persona_Con_Eureka",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9001/personas/otrapersona/otra@gmail.com/22",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"personas",
+								"otrapersona",
+								"otra@gmail.com",
+								"22"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "20_21_22_microservicio_cliente_contactos_en_eureka_securizado",
+			"item": [
+				{
+					"name": "Alta_Persona_Con_Eureka",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9001/personas/seguridad/seguridad@gmail.com/33",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"personas",
+								"seguridad",
+								"seguridad@gmail.com",
+								"33"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "17_18_23_microservicio_cliente_contactos_en_eureka_feign",
+			"item": [
+				{
+					"name": "Alta_Persona_Con_Eureka",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9001/personas/personafeing/feing@gmail.com/66",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"personas",
+								"personafeing",
+								"feing@gmail.com",
+								"66"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "17_24_microservicio_hoteles",
+			"item": [
+				{
+					"name": "DevolverHoteles",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/hoteles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"hoteles"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "17_25_microservicio_vuelos",
+			"item": [
+				{
+					"name": "vuelos_plaza",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9001/vuelos/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"vuelos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizar_vuelos_plaza",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9001/vuelos/1/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"vuelos",
+								"1",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "17_26_microservicio_reservas",
+			"item": [
+				{
+					"name": "Reservas",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:10000/reservas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"reservas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AltaReserva",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dni\": \"888\",\r\n    \"hotel\": 2,\r\n    \"nombre\": \"yo\",\r\n    \"vuelo\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:10000/reserva/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"reserva",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
